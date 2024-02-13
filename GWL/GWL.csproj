@@ -38,7 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
     <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
-    <IntermediateOutputPath>C:\Users\ryanc\AppData\Local\Temp\vs3BA.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\fdgod\AppData\Local\Temp\vsE856.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,7 +50,7 @@
     <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
     <PublishDatabases>false</PublishDatabases>
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
-    <IntermediateOutputPath>C:\Users\ryanc\AppData\Local\Temp\vs3BA.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\fdgod\AppData\Local\Temp\vsE856.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Dashboard.v15.2.Web, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -179,6 +179,7 @@
     <Content Include="Assets\bootstrap.min.js" />
     <Content Include="Assets\Editor\Editor.js" />
     <Content Include="Assets\Editor\EditorNew.js" />
+    <Content Include="Assets\Editor\sampMapping.js" />
     <Content Include="Assets\Editor\Toolbar.js" />
     <Content Include="Assets\Editor\Viewport.js" />
     <Content Include="Assets\enjoyhint\css\enjoyhint.css" />
