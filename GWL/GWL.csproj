@@ -38,7 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
     <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
-    <IntermediateOutputPath>C:\Users\ryanc\AppData\Local\Temp\vs1CB0.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\fdgod\AppData\Local\Temp\vs86B2.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,7 +50,7 @@
     <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
     <PublishDatabases>false</PublishDatabases>
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
-    <IntermediateOutputPath>C:\Users\ryanc\AppData\Local\Temp\vs1CB0.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\fdgod\AppData\Local\Temp\vs86B2.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Dashboard.v15.2.Web, Version=15.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -216,6 +216,7 @@
     <Content Include="Assets\bootstrap.min.css" />
     <Content Include="Assets\bootstrap.min.js" />
     <Content Include="Assets\Editor\Editor.js" />
+    <Content Include="Assets\Editor\EditorNew.js" />
     <Content Include="Assets\Editor\Toolbar.js" />
     <Content Include="Assets\Editor\Viewport.js" />
     <Content Include="Assets\enjoyhint\css\enjoyhint.css" />
@@ -3135,6 +3136,7 @@
     <Content Include="MainMenu\assets\plugins\global\plugins.bundle.js" />
     <Content Include="MainMenu\assets\plugins\global\plugins.bundle.rtl.css" />
     <Content Include="MainMenu\GEARSMainMenu.aspx" />
+    <Content Include="Mapping\frmEditor.aspx" />
     <Content Include="Mapping\frmMapEditor.aspx" />
     <Content Include="Mapping\frmMapping.aspx" />
     <Content Include="node_modules\three\build\three.js" />
@@ -4871,6 +4873,13 @@
     </Compile>
     <Compile Include="IT\Notification.aspx.designer.cs">
       <DependentUpon>Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\frmEditor.aspx.cs">
+      <DependentUpon>frmEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mapping\frmEditor.aspx.designer.cs">
+      <DependentUpon>frmEditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mapping\frmMapEditor.aspx.cs">
       <DependentUpon>frmMapEditor.aspx</DependentUpon>
