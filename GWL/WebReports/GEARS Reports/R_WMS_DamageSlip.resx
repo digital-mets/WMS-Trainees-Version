@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>SELECT WarehouseCode, RTRIM(LTRIM(UPPER(Description))) + '(' + RTRIM(LTRIM(UPPER(WarehouseCode))) + ')' AS
+       Description, ROW_NUMBER () OVER (ORDER BY WarehouseCode) AS Ord
+       FROM Masterfile.Warehouse WHERE ISNULL (IsInactive, 0) = 0
+       GROUP BY WarehouseCode, Description UNION ALL SELECT 'ALL' WarehouseCode
+       ,'ALL' AS Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery4.Sql" xml:space="preserve">
+    <value>SELECT BizPartnerCode, RTRIM (LTRIM (UPPER (Name))) + '(' + RTRIM
+       (LTRIM (UPPER (BizPartnerCode))) + ')' AS Name, ROW_NUMBER () OVER (ORDER BY BizPartnerCode) AS Ord
+       FROM Masterfile.BizPartner WHERE ISNULL (IsInactive, 0) = 0
+       GROUP BY BizPartnerCode, Name UNION ALL SELECT 'ALL' BizPartnerCode
+       ,'ALL' AS Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkNvbXBhbnlBZGRyZXNzIj48RmllbGQgTmFtZT0iVmFsdWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iQ29tcGFueU5hbWUiPjxGaWVsZCBOYW1lPSJWYWx1ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJDdXN0b21lciI+PEZpZWxkIE5hbWU9IkJpelBhcnRuZXJDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JkIiBUeXBlPSJJbnQ2NCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0ic3Bfd21zX3JlcG9ydF9EYW1hZ2VTbGlwIj48RmllbGQgTmFtZT0iSXRlbUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2l6ZUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTG9jYXRpb25Db2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkdlbmRlckNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvZHVjdENhdGVnb3J5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCcmFuZENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTm9PZkl0ZW0iIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IldhcmVob3VzZUNvZGUiPjxGaWVsZCBOYW1lPSJXYXJlaG91c2VDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9yZCIgVHlwZT0iSW50NjQiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
+  <data name="Remarks.Expression" xml:space="preserve">
+    <value>Iif([Field9] == 'MDC', [Field9]+' - ' +  'Construction/Handling'  
+  , Iif([Field9] == 'MDB', [Field9] +' - ' + 'Button/Rivets'  
+  , Iif([Field9]  == 'MDS',  [Field9] +' - ' + 'Stitch'
+  , Iif([Field9] == 'MDF',  [Field9] +' - ' + 'Fabric'
+  , Iif([Field9] == 'MDP',  [Field9] +' - ' + 'Branding/Patch'
+  , Iif([Field9] == 'MST',  [Field9] +' - ' + 'Stains'
+  , Iif([Field9] == 'MDR',  [Field9] +' - ' + 'Print'
+  , Iif([Field9] == 'SMS',  [Field9] +' - ' + 'Make-up Stains'
+  , Iif([Field9] == 'SBS',  [Field9] +' - ' + 'Broken Stitch'
+  , Iif([Field9] == 'SIS',  [Field9] +' - ' + 'Ink Stains'
+  , Iif([Field9] == 'SDS',  [Field9] +' - ' + 'Dirt and Hard Stains'
+  , Iif([Field9] == 'SFM',  [Field9] +' - ' + 'Fold Marks'
+  , Iif([Field9] == 'SMP',  [Field9] +' - ' + 'Mapping on Pants'
+  , Iif([Field9] == 'SSF',  [Field9] +' - ' + 'Scratches on Fabric'
+  , Iif([Field9] == 'SSH',  [Field9] +' - ' + 'Small Holes on Items'
+  , Iif([Field9] == 'SGS',  [Field9] +' - ' + 'Glue Satin'
+  , Iif([Field9] == 'CHS',  [Field9] +' - ' + 'Heavy Stain'
+  , Iif([Field9] == 'CWS',  [Field9] +' - ' + 'Water And Fire Stain'
+  , Iif([Field9] == 'CHW',  [Field9] +' - ' + 'With Holes But Still Wearable'
+  , Iif([Field9] == 'DLH',  [Field9] +' - ' + 'With Large Holes On Private Parts'
+  , Iif([Field9] == 'DTO',  [Field9] +' - ' + 'Items That Tear Off Easily And Unwearable'
+  , Iif([Field9] == '',  'Good', [Field9] + ' - ' + 'N/A'))))))))))))))))))))))</value>
+  </data>
+  <data name="MFG.Condition" xml:space="preserve">
+    <value>UPPER([Parameters.Location]) == 'CAVMJIMD'  Or 
+UPPER([Parameters.Location]) == 'CAVJLIMD'  Or 
+UPPER([Parameters.Location]) == 'CAVJGIMD'  Or 
+UPPER([Parameters.Location]) == 'CAVJEIMD'  Or 
+UPPER([Parameters.Location]) == 'CAVJZIMD'  Or 
+
+UPPER([Parameters.Location]) == 'CEBMJIMD'  Or 
+UPPER([Parameters.Location]) == 'CEBJLIMD'  Or 
+UPPER([Parameters.Location]) == 'CEBJGIMD'  Or 
+UPPER([Parameters.Location]) == 'CEBJEIMD'  Or 
+UPPER([Parameters.Location]) == 'CEBJZIMD'  Or 
+
+UPPER([Parameters.Location]) == 'DAVMJIMD'  Or 
+UPPER([Parameters.Location]) == 'DAVJLIMD'  Or 
+UPPER([Parameters.Location]) == 'DAVJGIMD'  Or 
+UPPER([Parameters.Location]) == 'DAVJEIMD'  Or 
+UPPER([Parameters.Location]) == 'DAVJZIMD'</value>
+  </data>
+  <data name="SD.Condition" xml:space="preserve">
+    <value>UPPER([Parameters.Location]) == 'CAVMJISD'  Or 
+UPPER([Parameters.Location]) == 'CAVJLISD'  Or 
+UPPER([Parameters.Location]) == 'CAVJGISD'  Or 
+UPPER([Parameters.Location]) == 'CAVJEISD'  Or 
+UPPER([Parameters.Location]) == 'CAVJZISD'  Or 
+
+UPPER([Parameters.Location]) == 'CEBMJISD'  Or 
+UPPER([Parameters.Location]) == 'CEBJLISD'  Or 
+UPPER([Parameters.Location]) == 'CEBJGISD'  Or 
+UPPER([Parameters.Location]) == 'CEBJEISD'  Or 
+UPPER([Parameters.Location]) == 'CEBJZISD'  Or 
+
+UPPER([Parameters.Location]) == 'DAVMJISD'  Or 
+UPPER([Parameters.Location]) == 'DAVJLISD'  Or 
+UPPER([Parameters.Location]) == 'DAVJGISD'  Or 
+UPPER([Parameters.Location]) == 'DAVJEISD'  Or 
+UPPER([Parameters.Location]) == 'DAVJZISD'</value>
+  </data>
+  <data name="WD.Condition" xml:space="preserve">
+    <value>UPPER([Parameters.Location]) == 'CAVMJIWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJLIWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJGIWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJEIWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJZIWD'  Or 
+
+UPPER([Parameters.Location]) == 'CEBMJIWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJLIWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJGIWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJEIWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJZIWD'  Or 
+
+UPPER([Parameters.Location]) == 'DAVMJIWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJLIWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJGIWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJEIWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJZIWD'</value>
+  </data>
+  <data name="NWD.Condition" xml:space="preserve">
+    <value>UPPER([Parameters.Location]) == 'CAVMJINWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJLINWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJGINWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJEINWD'  Or 
+UPPER([Parameters.Location]) == 'CAVJZINWD'  Or 
+
+UPPER([Parameters.Location]) == 'CEBMJINWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJLINWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJGINWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJEINWD'  Or 
+UPPER([Parameters.Location]) == 'CEBJZINWD'  Or 
+
+UPPER([Parameters.Location]) == 'DAVMJINWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJLINWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJGINWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJEINWD'  Or 
+UPPER([Parameters.Location]) == 'DAVJZINWD'</value>
+  </data>
+  <data name="$this.ScriptsSource" xml:space="preserve">
+    <value>
+private void xrPivotGrid1_FieldValueDisplayText(object sender, DevExpress.XtraReports.UI.PivotGrid.PivotFieldDisplayTextEventArgs e) {
+	if (e.ValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal)
+                e.DisplayText = "Total";
+}
+
+private void R_WMS_DamageSlip_ParametersRequestBeforeShow(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e) {
+	this.Parameters["PutAwayDateFrom"].Value = DateTime.Now;
+	this.Parameters["PutAwayDateTo"].Value = DateTime.Now;
+
+}
+</value>
+  </data>
+</root>

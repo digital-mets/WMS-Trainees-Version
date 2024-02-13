@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>SELECT A.Field1, A.Field2, A.Field3, A.Field4, A.Field5, A.Field6,
+       A.Field7, A.Field8, A.Field9, 'Total' AS Total FROM
+       Masterfile.WMSServiceType A INNER JOIN WMS.BillingOtherService
+       B ON A.ServiceType = B.ServiceType WHERE DocNumber = @DocNumber</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkNvbXBhbnlBZGRyZXNzIj48RmllbGQgTmFtZT0iVmFsdWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iQ29tcGFueU5hbWUiPjxGaWVsZCBOYW1lPSJWYWx1ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJIZWFkZXIiPjxGaWVsZCBOYW1lPSJGaWVsZDEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmllbGQyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZpZWxkMyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmllbGQ1IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZpZWxkNiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmllbGQ4IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZpZWxkOSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUb3RhbCIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJWYWx1ZXMiPjxGaWVsZCBOYW1lPSJEb2NOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2VydmljZVR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmlsbGluZ1BlcmlvZFR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udHJhY3ROdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQml6UGFydG5lckNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmlsbGluZ1N0YXRlbWVudCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZ1bGxOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNhbGVzTWFuTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmllbGQyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZpZWxkMyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZpZWxkNSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRmllbGQ3IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDYiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZpZWxkOCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaWVsZDkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVG90YWwiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkRhdGVGcm9tIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iRGF0ZVRvIiBUeXBlPSJEYXRlVGltZSIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iVlBGaW5hbmNlIj48RmllbGQgTmFtZT0iVmFsdWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <data name="$this.ScriptsSource" xml:space="preserve">
+    <value>int cntr = 0;
+int[] fields = new int[10]; //holds fields to hide in details
+private void xrTableRow2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) 
+{
+	XRTableRow row = (XRTableRow)sender;
+	cntr = 0;
+	for(int a = 0; a &lt; 10; a++)	
+	{
+		fields[a] = 0;//setting array to 0
+	}
+	for(int a = 0; a &lt; 10; a++)	
+	{
+		if (String.IsNullOrEmpty(row.Cells[a].Text)) 
+		{	
+			cntr++;
+			fields[a] = 1;//checking empty columns
+		}
+	}
+	if(cntr == 10)
+	{
+		//checking if all columns are empty
+		for(int a = 0; a &lt; 10; a++)
+			{row.Cells[a].Width = 100;}
+	}
+	else
+	{
+		for(int a = 0; a &lt; 10; a++)	
+		{
+			if (String.IsNullOrEmpty(row.Cells[a].Text)) 
+				{row.Cells[a].Width = 0;} //hide columns
+			else
+				{row.Cells[a].Width = 100;}
+		}
+	}
+}
+
+private void xrTableRow2_AfterPrint(object sender, System.EventArgs e) 
+{
+	XRTableRow row = (XRTableRow)sender;
+	int b = 0;
+	do
+	{ 
+		for(int a = 0; a &lt; 10; a++)
+		{	
+			row.Cells[a].Width = 100; //rezising widths
+		}
+		b++;
+	}while(b &lt; 2);
+}
+
+private void xrTableRow5_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) 
+{
+	XRTableRow row = (XRTableRow)sender;
+	if(cntr == 10)
+	{
+		for(int a = 0; a &lt; 10; a++)
+			{row.Cells[a].Width = 100;}
+	}
+	else
+	{
+		for(int a = 0; a &lt; 10; a++)	
+		{	
+			if(fields[a] != 1)	
+				{row.Cells[a].Width = 100;} 
+			else
+				{row.Cells[a].Width = 0;}
+		}
+	}
+}
+
+private void xrTableRow5_AfterPrint(object sender, System.EventArgs e) 
+{
+	XRTableRow row = (XRTableRow)sender;
+	int b = 0;
+	do
+	{ 
+		for(int a = 0; a &lt; 10; a++)
+		{	
+			row.Cells[a].Width = 100;
+		}
+		b++;
+	}while(b &lt; 2);}
+</value>
+  </data>
+</root>

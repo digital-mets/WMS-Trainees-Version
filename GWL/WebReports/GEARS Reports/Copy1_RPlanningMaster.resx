@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>
+
+	SELECT  DATEADD(DAY, nbr - 1, @StartDate) as DaysofWeek into #dates
+	FROM    ( SELECT ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM sys.columns c
+			) nbrs
+	WHERE   nbr - 1 &lt;= DATEDIFF(DAY, @StartDate, @EndDate)
+
+;with WITHWC as (
+	select WorkCenter,(case when ISNULL(InQty,0) &gt; 0 then InQty 
+			else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+			TargetDateIn,TargetDateOut,DocNumber,
+	DATEDIFF(d,TargetDateIn,TargetDateOut)+1 as Days
+	from Production.JOStepPlanning
+	where  ISNULL(TargetDateOut,'')!=''
+	and ISNULL(TargetDateIn,'')!=''
+	and ISNULL(WorkCenter,'') in (SELECT DocNumber FROM 
+		(SELECT Split.a.value('.', 'VARCHAR(MAX)') AS DocNumber 
+		FROM (SELECT CAST ('&lt;M&gt;' + REPLACE(@WorkCenter, ',', '&lt;/M&gt;&lt;M&gt;') + '&lt;/M&gt;' AS XML) AS String  
+		) AS A CROSS APPLY String.nodes ('/M') AS Split(a)) AS X )
+	and ISNULL(stepCode,'')=@stepcode
+	and TargetDateIn between @StartDate and @EndDate
+)
+select WorkCenter,a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+	TargetDateIn,TargetDateOut,Days into #withwc from WITHWC a
+	inner join Production.JobOrder b
+	on a.DocNumber = b.DocNumber
+
+--select * From #withwc
+
+SELECT  WorkCenter,DocNumber,DATEADD(DAY, nbr-1, TargetDateIn) as DaysofWeek,
+case when DATEADD(DAY, nbr-1, TargetDateIn)=TargetDateIn then JOstepQty
+else 0 end as Value into #temp
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withwc
+WHERE   nbr-1 &lt;= DATEDIFF(DAY,TargetDateIn , TargetDateOut)
+
+--select * from #temp
+
+;with WITHOUTWC as (
+select WorkCenter,(case when ISNULL(InQty,0) &gt; 0 then InQty 
+		else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+		TargetDateIn,TargetDateOut,DueDate,a.DocNumber,
+		DATEDIFF(d,DueDate,DueDate)+1 as Days
+		from Production.JOStepPlanning a
+		inner join Production.JobOrder b
+		on a.DocNumber = b.DocNumber
+		where  ISNULL(TargetDateOut,'')=''
+		and ISNULL(TargetDateIn,'')=''
+		and ISNULL(DueDate,'')!=''
+		and ISNULL(WorkCenter,'')=''
+		and ISNULL(stepCode,'')=@stepcode
+		and DueDate between @StartDate and @EndDate
+)
+select WorkCenter,a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+	TargetDateIn,TargetDateOut,a.DueDate,Days into #withoutwc from WITHOUTWC a
+	inner join Production.JobOrder b
+	on a.DocNumber = b.DocNumber
+
+SELECT WorkCenter,DocNumber,DATEADD(DAY, nbr-1, DueDate) as DaysofWeek,
+case when DATEADD(DAY, nbr-1, DueDate)=DueDate then JOstepQty
+else 0 end as Value into #temp2
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withoutwc
+	WHERE   nbr-1 &lt;= DATEDIFF(DAY,DueDate , DueDate)
+
+--select * from #temp2
+
+;with WITHOUTWC2 as (
+select WorkCenter,(case when ISNULL(InQty,0) &gt; 0 then InQty 
+		else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+		TargetDateIn,TargetDateOut,DueDate,a.DocNumber,
+		DATEDIFF(d,TargetDateIn,TargetDateOut)+1 as Days
+		from Production.JOStepPlanning a
+		inner join Production.JobOrder b
+		on a.DocNumber = b.DocNumber
+		where ISNULL(TargetDateOut,'')!=''
+		and ISNULL(TargetDateIn,'')!=''
+		and ISNULL(WorkCenter,'')=''
+		and ISNULL(stepCode,'')=@stepcode
+		and TargetDateIn between @StartDate and @EndDate
+)
+select WorkCenter,a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+	TargetDateIn,TargetDateOut,a.DueDate,Days into #withoutwc2 from WITHOUTWC2 a
+	inner join Production.JobOrder b
+	on a.DocNumber = b.DocNumber
+
+	SELECT WorkCenter,DocNumber,DATEADD(DAY, nbr-1, TargetDateIn) as DaysofWeek,
+	case when DATEADD(DAY, nbr-1, TargetDateIn)=TargetDateIn then JOstepQty
+	else 0 end as Value into #temp3
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withoutwc2
+	WHERE   nbr-1 &lt;= DATEDIFF(DAY,TargetDateIn , TargetDateOut)
+--select * from #temp3
+
+	Select WorkCenter,Step,OutputDays into #WorkCenter from Masterfile.WorkCenter a where 
+	ISNULL(WorkCenter,'') in (SELECT DocNumber FROM 
+		(SELECT Split.a.value('.', 'VARCHAR(MAX)') AS DocNumber 
+		FROM (SELECT CAST ('&lt;M&gt;' + REPLACE(@WorkCenter, ',', '&lt;/M&gt;&lt;M&gt;') + '&lt;/M&gt;' AS XML) AS String  
+		) AS A CROSS APPLY String.nodes ('/M') AS Split(a)) AS X ) and Step = @stepcode
+
+	select DaysofWeek,WorkCenter,OutputDays 
+	into #WorkCap
+	 from #dates,#WorkCenter
+
+if @woutassigned = 1
+begin
+	--select WorkCenter,DaysofWeek,SUM(OutputDays-Val) as AvailableCapacity into #precap from (
+	--select WorkCenter,DaysofWeek,SUM(val) as Val,SUM(OutputDays) as OutputDays From(
+	--select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp	
+	--group by DaysofWeek,WorkCenter
+	--union all 
+	--select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp2	
+	--group by DaysofWeek,WorkCenter
+	--union all
+	--select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp3
+	--group by DaysofWeek,WorkCenter
+	--) t
+	--group by DaysofWeek,WorkCenter
+	--union all
+	--select WorkCenter,DaysofWeek,0 as Val,OutputDays from #WorkCap
+	--) u
+	--group by DaysofWeek,WorkCenter
+	
+	select WorkCenter,DaysofWeek,SUM(OutputDays-Val) as AvailableCapacity into #prewc from (
+	select WorkCenter,DaysofWeek,SUM(val) as Val,SUM(OutputDays) as OutputDays From(
+	select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp	
+	group by DaysofWeek,WorkCenter
+	union all
+	select WorkCenter,DaysofWeek,0 as Val,OutputDays from #WorkCap
+	)t
+	group by DaysofWeek,WorkCenter
+	)u
+	group by DaysofWeek,WorkCenter
+	
+	--select * from #temp
+	--select * from #temp2
+	--select * from #temp3
+	
+	select WorkCenter,DaysofWeek,SUM(Val) as Val into #precap from (
+	select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val from #temp2	
+	group by DaysofWeek,WorkCenter
+	union all
+	select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val from #temp3
+	group by DaysofWeek,WorkCenter
+	) t
+	group by WorkCenter,DaysofWeek
+	order by DaysofWeek
+	
+	--select * From #prewc
+	--select * from #precap
+	
+	select a.WorkCenter,A.DaysofWeek,sum(isnull((AvailableCapacity-Val),AvailableCapacity)) As AvailableCapacity into #prefin from #prewc a
+	left join #precap b on a.DaysofWeek = b.DaysofWeek
+	group by a.WorkCenter,A.DaysofWeek
+	order by a.WorkCenter
+	
+	select WorkCenter,SUM(Capacity) as Capacity,SUM(Available) as Available from(
+	select WorkCenter,DaysofWeek,OutputDays as Capacity,0 as Available  from #WorkCap
+	union all 
+	select WorkCenter,DaysofWeek,0 as Capacity,AvailableCapacity as Available from #prefin
+	)WorkCapacity
+	where DaysofWeek between @StartDate and @EndDate
+	group by WorkCenter
+end
+else
+begin
+	select WorkCenter,DaysofWeek,SUM(OutputDays-Val) as AvailableCapacity into #precap2 from (
+	select WorkCenter,DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp	
+	group by DaysofWeek,WorkCenter
+	union all
+	select WorkCenter,DaysofWeek,0 as Val,OutputDays from #WorkCap
+	) u
+	group by DaysofWeek,WorkCenter
+	
+	--select * from #temp
+	--select * From #WorkCap
+	--select * from #precap2
+	
+	select WorkCenter,SUM(Capacity) as Capacity,SUM(Available) as Available from(
+	select WorkCenter,DaysofWeek,OutputDays as Capacity,0 as Available  from #WorkCap
+	union all 
+	select WorkCenter,DaysofWeek,0 as Capacity,AvailableCapacity as Available from #precap2
+	)WorkCapacity
+	where DaysofWeek between @StartDate and @EndDate
+	group by WorkCenter
+end
+
+</value>
+  </data>
+  <data name="customSqlQuery2.Sql" xml:space="preserve">
+    <value>begin tran
+	select a.DocNumber, DueDate, WorkCenter, (case when ISNULL
+       (InQty, 0) &gt; 0 then InQty else ISNULL (WorkOrderQty, 0) end)
+       as JOStepQty into #WITHOUTWC
+	   from Production.JOStepPlanning a
+	   inner join Production.JobOrder b on a.DocNumber = b.DocNumber
+	   where ISNULL (WorkCenter, '') = '' and ISNULL (stepCode,
+		   '') = @stepcode and DueDate between @StartDate and @EndDate
+		   
+	  select sum((case when a.JOStepQty = 0 then isnull
+		   (TotalJOQty, 0) else a.JOStepQty end)) as JOstepQty
+	  from #WITHOUTWC a
+	  inner join Production.JobOrder b on a.DocNumber = b.DocNumber
+
+rollback tran</value>
+  </data>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>begin tran 
+select a.DocNumber, DueDate, TargetDateIn, TargetDateOut,
+       WorkCenter, (case when ISNULL (InQty, 0) &gt; 0 then InQty else
+       ISNULL (WorkOrderQty, 0) end) as JOStepQty into #WITHWC
+  from Production.JOStepPlanning a
+  inner join Production.JobOrder b on a.DocNumber = b.DocNumber
+ where ISNULL (TargetDateOut, '') ! = '' and ISNULL (TargetDateIn, '')
+       ! = '' and ISNULL(WorkCenter,'') in (SELECT DocNumber FROM 
+		(SELECT Split.a.value('.', 'VARCHAR(MAX)') AS DocNumber 
+		FROM (SELECT CAST ('&lt;M&gt;' + REPLACE(@WorkCenter, ',', '&lt;/M&gt;&lt;M&gt;') + '&lt;/M&gt;' AS XML) AS String  
+		) AS A CROSS APPLY String.nodes ('/M') AS Split(a)) AS X ) and ISNULL
+       (stepCode, '') = @stepcode and TargetDateIn between @StartDate
+       and @EndDate
+       
+   select sum((case when a.JOStepQty = 0 then isnull
+       (TotalJOQty, 0) else a.JOStepQty end)) as JOstepQty
+  from #WITHWC a
+  inner join Production.JobOrder b on a.DocNumber = b.DocNumber
+rollback tran
+</value>
+  </data>
+  <data name="customSqlQuery4.Sql" xml:space="preserve">
+    <value>begin tran
+
+;with WITHWC as (
+select (case when ISNULL(InQty,0) &gt; 0 then InQty 
+		else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+		TargetDateIn,TargetDateOut,DocNumber,
+DATEDIFF(d,TargetDateIn,TargetDateOut)+1 as Days
+from Production.JOStepPlanning
+where  ISNULL(TargetDateOut,'')!=''
+and ISNULL(TargetDateIn,'')!=''
+and ISNULL(WorkCenter,'')=@WorkCenter
+and ISNULL(stepCode,'')=@stepcode
+and TargetDateIn between @StartDate and @EndDate
+)
+select a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+TargetDateIn,TargetDateOut,Days into #withwc from WITHWC a
+inner join Production.JobOrder b
+on a.DocNumber = b.DocNumber
+
+SELECT  DocNumber,DATEADD(DAY, nbr-1, TargetDateIn) as DaysofWeek,JOStepQty/
+(case when Days = 0 then 1 else Days end)as Value into #temp
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withwc
+	WHERE   nbr-1 &lt;= DATEDIFF(DAY,TargetDateIn , TargetDateOut)
+
+;with WITHOUTWC as (
+select (case when ISNULL(InQty,0) &gt; 0 then InQty 
+		else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+		TargetDateIn,TargetDateOut,DueDate,a.DocNumber,
+DATEDIFF(d,DueDate,DueDate)+1 as Days
+from Production.JOStepPlanning a
+inner join Production.JobOrder b
+on a.DocNumber = b.DocNumber
+where  ISNULL(TargetDateOut,'')=''
+and ISNULL(TargetDateIn,'')=''
+and ISNULL(DueDate,'')!=''
+and ISNULL(WorkCenter,'')=''
+and ISNULL(stepCode,'')=@stepcode
+and DueDate between @StartDate and @EndDate
+)
+select a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+TargetDateIn,TargetDateOut,a.DueDate,Days into #withoutwc from WITHOUTWC a
+inner join Production.JobOrder b
+on a.DocNumber = b.DocNumber
+
+SELECT  DocNumber,DATEADD(DAY, nbr-1, DueDate) as DaysofWeek,JOStepQty/
+(case when Days = 0 then 1 else Days end)as Value into #temp2
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withoutwc
+	WHERE   nbr-1 &lt;= DATEDIFF(DAY,DueDate , DueDate)
+
+;with WITHOUTWC2 as (
+select (case when ISNULL(InQty,0) &gt; 0 then InQty 
+		else ISNULL(WorkOrderQty,0) end) as JOStepQty,
+		TargetDateIn,TargetDateOut,DueDate,a.DocNumber,
+DATEDIFF(d,TargetDateIn,TargetDateOut)+1 as Days
+from Production.JOStepPlanning a
+inner join Production.JobOrder b
+on a.DocNumber = b.DocNumber
+where ISNULL(TargetDateOut,'')!=''
+and ISNULL(TargetDateIn,'')!=''
+and ISNULL(WorkCenter,'')=''
+and ISNULL(stepCode,'')=@stepcode
+and TargetDateIn between @StartDate and @EndDate
+)
+select a.DocNumber,(case when a.JOStepQty = 0 then isnull(TotalJOQty,0) else a.JOStepQty end) as JOstepQty,
+TargetDateIn,TargetDateOut,a.DueDate,Days into #withoutwc2 from WITHOUTWC2 a
+inner join Production.JobOrder b
+on a.DocNumber = b.DocNumber
+
+SELECT  DocNumber,DATEADD(DAY, nbr-1, TargetDateIn) as DaysofWeek,JOStepQty/
+(case when Days = 0 then 1 else Days end)as Value into #temp3
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs, #withoutwc2
+	WHERE   nbr-1 &lt;= DATEDIFF(DAY,TargetDateIn , TargetDateOut)
+
+SELECT  DATEADD(DAY, nbr - 1, @StartDate) as DaysofWeek into #dates
+	FROM    ( SELECT    ROW_NUMBER() OVER ( ORDER BY c.object_id ) AS Nbr
+			  FROM      sys.columns c
+			) nbrs
+	WHERE   nbr - 1 &lt;= DATEDIFF(DAY, @StartDate, @EndDate)
+
+	Select WorkCenter,Step,OutputDays into #WorkCenter from Masterfile.WorkCenter a where WorkCenter = @WorkCenter and Step = @stepcode
+
+	select DaysofWeek,WorkCenter,OutputDays into #WorkCap from #dates,#WorkCenter
+
+if @woutassigned = 0
+begin
+	select DaysofWeek,SUM(OutputDays-Val) as AvailableCapacity into #precap from (
+	select DaysofWeek,SUM(val) as Val,SUM(OutputDays) as OutputDays From(
+	select DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp	
+	group by DaysofWeek
+	union all 
+	select DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp2	
+	group by DaysofWeek
+	union all
+	select DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp3
+	group by DaysofWeek
+	) t
+	group by DaysofWeek
+	union all
+	select DaysofWeek,0 as Val,OutputDays from #WorkCap
+	) u
+	group by DaysofWeek
+	
+	
+	--SELECT DATENAME(month, DATEADD(month, @mydate-1, CAST('2008-01-01' AS datetime)))
+	
+	select  @WorkCenter as WorkCenter,DATENAME(month, DATEADD(month, MONTH(DaysofWeek)-1, CAST('2008-01-01' AS datetime))) as Month
+	,SUM(Capacity) as Capacity,SUM(Available) as Available into #sum  from(
+	select DaysofWeek,OutputDays as Capacity,0 as Available  from #WorkCap
+	union all 
+	select DaysofWeek,0 as Capacity,AvailableCapacity as Available from #precap
+	)WorkCapacity
+	group by MONTH(DaysofWeek)
+	
+	select SUM(Capacity) as Capacity,SUM(Available) as Available from #sum
+end
+else
+begin
+	select DaysofWeek,SUM(OutputDays-Val) as AvailableCapacity into #precap2 from (
+	select DaysofWeek,convert(decimal(15,2),ROUND(SUM(value),2)) as Val, 0 as OutputDays from #temp	
+	group by DaysofWeek
+	union all
+	select DaysofWeek,0 as Val,OutputDays from #WorkCap
+	) u
+	group by DaysofWeek
+	
+	select  @WorkCenter as WorkCenter,DATENAME(month, DATEADD(month, MONTH(DaysofWeek)-1, CAST('2008-01-01' AS datetime))) as Month
+	,SUM(Capacity) as Capacity,SUM(Available) as Available into #sum2 from(
+	select DaysofWeek,OutputDays as Capacity,0 as Available  from #WorkCap
+	union all 
+	select DaysofWeek,0 as Capacity,AvailableCapacity as Available from #precap2
+	)WorkCapacity
+	group by MONTH(DaysofWeek)
+	
+	select SUM(Capacity) as Capacity,SUM(Available) as Available from #sum2
+end
+
+rollback tran</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkFzc2lnbmVkIj48RmllbGQgTmFtZT0iSk9zdGVwUXR5IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48VmlldyBOYW1lPSJBc3NpZ25lZDIiPjxGaWVsZCBOYW1lPSJDYXBhY2l0eSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQXZhaWxhYmxlIiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48VmlldyBOYW1lPSJBdmFpbGFibGUiPjxGaWVsZCBOYW1lPSJXb3JrQ2VudGVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNhcGFjaXR5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBdmFpbGFibGUiIFR5cGU9IkRlY2ltYWwiIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlN0ZXBDb2RlIj48RmllbGQgTmFtZT0iU3RlcENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iVW5hc3NpZ25lZCI+PEZpZWxkIE5hbWU9IkpPc3RlcFF0eSIgVHlwZT0iRGVjaW1hbCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iV29ya0NlbnRlciI+PEZpZWxkIE5hbWU9IldvcmtDZW50ZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+</root>

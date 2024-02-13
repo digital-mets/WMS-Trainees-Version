@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>SELECT DISTINCT ColorCode, Description, ROW_NUMBER () OVER (ORDER BY
+       ColorCode) AS Ord FROM Masterfile.Color WHERE ISNULL
+       (IsInactive, 0) = 0 UNION ALL SELECT 'ALL' AS ColorCode, 'ALL'
+       AS Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery4.Sql" xml:space="preserve">
+    <value>SELECT ClassCode, Description, ROW_NUMBER () OVER (ORDER BY ClassCode)
+       AS Ord FROM Masterfile.Class WHERE ISNULL (IsInactive, 0) = 0
+       UNION ALL SELECT 'ALL' AS ClassCode, 'ALL' AS Description, 0 AS
+       Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery5.Sql" xml:space="preserve">
+    <value>SELECT SizeCode, Description, ROW_NUMBER () OVER (ORDER BY SizeCode)
+       AS Ord FROM Masterfile.Size WHERE ISNULL (IsInactive, 0) = 0
+       UNION ALL SELECT 'ALL' AS SizeCode, 'ALL' AS Description, 0 AS
+       Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery6.Sql" xml:space="preserve">
+    <value>SELECT ItemCode, ItemCode + '(' + ShortDesc + ')' AS ShortDesc,
+       ROW_NUMBER () OVER (ORDER BY ItemCode) AS Ord FROM
+       Masterfile.Item WHERE ISNULL (IsInactive, 0) = 0 UNION ALL
+       SELECT 'ALL' AS ItemCode, 'ALL' AS ShortDesc, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery7.Sql" xml:space="preserve">
+    <value>SELECT DISTINCT ProductCategoryCode as ProductCategory, Description,
+       ROW_NUMBER () OVER (ORDER BY ProductCategoryCode) AS Ord FROM
+       Masterfile.ProductCategory WHERE ISNULL (IsInactive, 0) = 0
+       UNION ALL SELECT 'ALL' AS ProductCategory, 'ALL' AS
+       Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery8.Sql" xml:space="preserve">
+    <value>SELECT DISTINCT ProductSubCatCode as ProductSubCategory, Description,
+       ROW_NUMBER () OVER (ORDER BY ProductSubCatCode) AS Ord FROM
+       Masterfile.ProductCategorySub WHERE ISNULL (IsInactive, 0) = 0
+       UNION ALL SELECT 'ALL' AS ProductSubCategory, 'ALL' AS
+       Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery9.Sql" xml:space="preserve">
+    <value>SELECT BizPartnerCode as CustomerCode, Name, ROW_NUMBER () OVER (ORDER
+       BY BizPartnerCode) AS Ord FROM Masterfile.BPCustomerInfo WHERE
+       ISNULL (IsInactive, 0) = 0 UNION ALL SELECT 'ALL' AS
+       CustomerCode, 'ALL' AS Name, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery10.Sql" xml:space="preserve">
+    <value>SELECT WarehouseCode, Description,
+       ROW_NUMBER () OVER (ORDER BY WarehouseCode) AS Ord FROM Masterfile.Warehouse WHERE
+       ISNULL (IsInactive, 0) = 0 UNION ALL SELECT 'ALL' AS
+       WarehouseCode, 'ALL' AS Description, 0 AS Ord ORDER BY Ord</value>
+  </data>
+  <data name="customSqlQuery12.Sql" xml:space="preserve">
+    <value>SELECT DISTINCT EmployeeCode AS SalesMan, FirstName + ' ' + LastName AS Name, ROW_NUMBER () OVER
+       (ORDER BY EmployeeCode) AS Ord FROM Masterfile.BPEmployeeInfo
+       WHERE ISNULL (IsInActive, 0) = 0 UNION
+       ALL SELECT 'ALL' AS SalesMan, 'ALL' AS Name, 0 AS Ord ORDER BY
+       Ord</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkNsYXNzQ29kZSI+PEZpZWxkIE5hbWU9IkNsYXNzQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmQiIFR5cGU9IkludDY0IiAvPjwvVmlldz48VmlldyBOYW1lPSJDb2xvckNvZGUiPjxGaWVsZCBOYW1lPSJDb2xvckNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JkIiBUeXBlPSJJbnQ2NCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iQ29tcGFueUFkZHJlc3MiPjxGaWVsZCBOYW1lPSJWYWx1ZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJDb21wYW55TmFtZSI+PEZpZWxkIE5hbWU9IlZhbHVlIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9IkN1c3RvbWVyIj48RmllbGQgTmFtZT0iQ3VzdG9tZXJDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JkIiBUeXBlPSJJbnQ2NCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iSXRlbUNhdGVnb3J5Ij48RmllbGQgTmFtZT0iSXRlbUNhdGVnb3J5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJJdGVtQ29kZSI+PEZpZWxkIE5hbWU9Ikl0ZW1Db2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNob3J0RGVzYyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmQiIFR5cGU9IkludDY0IiAvPjwvVmlldz48VmlldyBOYW1lPSJJdGVtVHlwZSI+PEZpZWxkIE5hbWU9IkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUHJvZENhdENvZGUiPjxGaWVsZCBOYW1lPSJQcm9kdWN0Q2F0ZWdvcnkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JkIiBUeXBlPSJJbnQ2NCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUHJvZFN1YkNhdCI+PEZpZWxkIE5hbWU9IlByb2R1Y3RTdWJDYXRlZ29yeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmQiIFR5cGU9IkludDY0IiAvPjwvVmlldz48VmlldyBOYW1lPSJTYWxlc01hbiI+PEZpZWxkIE5hbWU9IlNhbGVzTWFuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3JkIiBUeXBlPSJJbnQ2NCIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iU2l6ZUNvZGUiPjxGaWVsZCBOYW1lPSJTaXplQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmQiIFR5cGU9IkludDY0IiAvPjwvVmlldz48VmlldyBOYW1lPSJTb3J0QnkiPjxGaWVsZCBOYW1lPSJWYWx1ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJWYWx1ZXMiPjxGaWVsZCBOYW1lPSJHcm91cEJ5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IldhcmVob3VzZUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvZENhdERlc2MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXRlbUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRnVsbERlc2MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sb3JDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNsYXNzQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTaXplQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPbkhhbmQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlVuaXQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQnVsa1F0eSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iSXRlbUNhdGVnb3J5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQcm9kdWN0Q2F0ZWdvcnlDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlByb2R1Y3RTdWJDYXRDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1c3RvbWVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRhZyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJXYXJlaG91c2VDb2RlIj48RmllbGQgTmFtZT0iV2FyZWhvdXNlQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPcmQiIFR5cGU9IkludDY0IiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <metadata name="directorySearcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="$this.ScriptsSource" xml:space="preserve">
+    <value>
+private void GroupFooter1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) {
+		XtraReport report = (XtraReport)Report;
+
+            if (report.Parameters["SummaryWH"].Value.ToString() == "True" &amp;&amp;
+			report.Parameters["SummaryWHItem"].Value.ToString() == "False")
+            {
+                e.Cancel = true;
+            }
+
+}
+
+
+
+private void R_RemainingInv2_ParametersRequestBeforeShow(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e) {
+	XtraReport report = (XtraReport)Report;
+	report.Parameters["CutOffDate"].Value = DateTime.Now.ToString();
+}
+</value>
+  </data>
+</root>
